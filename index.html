@@ -4,7 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Url to Image</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        .heading h1 {
+            font-size: 2.8rem;
+            color: #2d3a4b;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 2.5px;
+            font-weight: 800;
+            text-shadow: 0 4px 24px rgba(106, 130, 251, 0.12);
+            animation: fadeInDown 1s;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .form {
+            background: #fff;
+            padding: 2.8rem 2.2rem 2.2rem 2.2rem;
+            border-radius: 22px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 340px;
+            animation: fadeInUp 1.2s;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .form input[type="text"] {
+            width: 270px;
+            padding: 0.85rem 1.1rem;
+            border: 1.5px solid #bfc9d1;
+            border-radius: 10px;
+            font-size: 1.08rem;
+            margin-bottom: 1.5rem;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(108, 99, 255, 0.04);
+        }
+        .form input[type="text"]:focus {
+            border: 2px solid #6a82fb;
+            box-shadow: 0 4px 16px rgba(106, 130, 251, 0.13);
+        }
+        .form button {
+            padding: 0.8rem 2.5rem;
+            background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(108, 99, 255, 0.13);
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            letter-spacing: 1px;
+        }
+        .form button:hover {
+            background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 24px rgba(252, 92, 125, 0.13);
+        }
+        @media (max-width: 500px) {
+            .form {
+                min-width: 90vw;
+                padding: 1.5rem 0.5rem;
+            }
+            .form input[type="text"] {
+                width: 80vw;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,7 +107,6 @@
                 <button type="submit">Download</button>
             </form>
         </div>
-
     </div>
 </body>
 </html>
